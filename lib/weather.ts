@@ -11,7 +11,7 @@ export interface WeatherData {
 }
 
 export async function fetchWeather(city: string): Promise<WeatherData> {
-  const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
+  const apiKey = process.env.WEATHER_API_KEY;
   const response = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
   );
